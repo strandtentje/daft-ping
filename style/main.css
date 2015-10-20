@@ -1,0 +1,150 @@
+head {
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+	background-color: black;
+	background-image: url('/static/backdrop.png');
+	background-size: 1024px;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: "EB Garamond";
+	font-size: 15pt;
+	position: relative;
+}
+
+.backdrop, #starry1, #starry2, #nebula1, #nebula2 {
+	display: none;
+}
+
+@media (min-width: 1184px) {
+	.backdrop {
+		display: block;
+		background-image: url('/static/backdrop.png');
+		margin: 0px;
+		padding: 0px;
+		width: 100vw;
+		height: 100vh;
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#starry1 {
+		display: block;
+		background-position: 300px 300px;
+		z-index: 2;
+	}
+
+	#starry2 {
+		display: block;
+		background-size: 1536px;
+		background-position: 500px 500px;
+		z-index: 3;
+	}
+
+	#nebula1 {
+		display: block;
+		height: 1900px;
+		width: 1000px;
+		position: fixed;
+		left: -5%;
+		top: -5%;
+		margin: -200px;
+		z-index: 4;
+	}
+
+	#nebula2 {
+		display: block;
+		height: 1900px;
+		width: 700px;
+		position: fixed;
+		right: -5%;
+		bottom: -5%;
+		margin: -200px;
+		z-index: 5;
+	}
+}
+	
+.section {
+	clear:both;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+@media (min-width: 1184px) {
+	.section {
+		position: relative;
+		z-index: 10;
+		left: 15vw;
+		margin-top: 1cm;
+		margin-left: auto;
+		margin-right: auto;
+		width: 20cm;
+	}
+}
+
+h1 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 90pt;
+    margin-bottom: 0px;
+    line-height: 90%;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#subh1 {
+	font-family: 'Quicksand', sans-serif;
+	display: block;
+	border-top: solid 3px;
+	padding-top: 3px;
+	margin-top: 3px;
+	font-size: 26pt;
+	text-align: center;
+	width: 100vw;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (min-width: 9cm) {
+	h1, #subh1 {
+		width: 9cm;
+	}
+}
+
+.incentive a {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 7cm;
+	line-height: 1.5cm;
+	text-align: center;
+	color: black;
+	font-weight: 700;
+	text-decoration: none;
+
+	font-family: "Quicksand";
+	background-color: #FFF;
+	border-radius: 0.5cm;
+	margin-top: 1cm;
+}
+
+#planeet {
+	width: 100vw; height: 25vw;
+	position: absolute;
+	z-index: 15;
+}
+
+#credits {
+	position: absolute;
+	z-index: 20;
+	width: 100%;
+	bottom: 0px;
+	text-align: center;
+}
