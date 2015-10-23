@@ -72,8 +72,8 @@ body {
 	
 .section {
 	clear:both;
-	margin-left: 4px;
-	margin-right: 4px;
+	margin-left: 12px;
+	margin-right: 12px;
 }
 
 @media (min-width: 1184px) {
@@ -143,6 +143,7 @@ h1 {
 	width: 100vw; height: 25vw;
 	position: absolute;
 	z-index: 15;
+	bottom: calc(-25vw - 8px);
 }
 
 #credits {
@@ -153,6 +154,16 @@ h1 {
 	text-align: center;
 }
 
+@media(min-width: 1184px) {
+	#credits {
+		left: 15vw;
+	}
+}
+
 #credits a {
 	color: white;
+}
+
+#contents {
+	min-height: 100vh;
 }
