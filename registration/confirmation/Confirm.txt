@@ -1,0 +1,26 @@
+Hi {% firstname %} {% lastname %}
+
+You've signed up for "Daft Ping: LAN More Time". 
+
+We've registered the following information, please 
+check for errors and notify us in a timely fashion 
+if something isn't correct:
+
+╔═ Address ═══════╾┈
+║ {% street %} {% number %}
+║ {% postal %}  {% city %}
+╚════════╾┈
+
+╔═ Bank account ═════╾┈
+║ {% accountnumber %} ({% accountowner %})
+╚════════╾┈
+
+╔═ Perks and options ═════╾┈
+{% orders %}╚════════╾┈
+
+╔═ Remarks ═════╾┈
+║ "{% additionalinfo %}"
+╚════════╾┈
+
+Kind regards,
+sv Cover LANcee

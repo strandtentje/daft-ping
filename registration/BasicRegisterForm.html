@@ -1,0 +1,135 @@
+<div class="central section">
+	<h2>
+		Register
+	</h2>
+	<form method="post">
+		<fieldset>
+			<legend>Personal information</legend>
+			<label for="firstname">
+				First name
+			</label>
+			{% firstname_failure %}
+			<input type="text" name="firstname" value="{% firstname %}">
+
+			<label for="lastname">
+				Last name
+			</label>
+			{% lastname_failure %}
+			<input type="text" name="lastname" value="{% lastname %}">
+
+			<label for="email">
+				E-mail address
+			</label>
+			{% email_failure %}
+			<input type="email" name="email" value="{% email %}">
+		</fieldset>
+
+		<fieldset>
+			<legend>Address</legend>
+			<label for="street">
+				Street
+			</label>
+			{% street_failure %}
+			<input type="text" name="street" value="{% street %}">
+
+			<label for="number">
+				Number
+			</label>
+			{% number_failure %}
+			<input type="text" name="number" value="{% number %}">
+
+			<label for="postal">
+				Postal Code
+			</label>
+			{% postal_failure %}
+			<input type="text" name="postal" value="{% postal %}">
+
+			<label for="city">
+				City
+			</label>
+			{% city_failure %}
+			<input type="text" name="city" value="{% city %}">
+		</fieldset>
+
+		<fieldset>
+			<script type="text/javascript">
+				var attendancefee = 20;
+				var transportfee = 0;
+
+				function setattendance (fee) {
+					attendancefee = fee;
+					var total = document.getElementById("total");
+					total.innerHTML = "€" + (attendancefee + transportfee);
+				}
+	
+				function settransport (fee) {
+					transportfee = fee;
+					var total = document.getElementById("total");
+					total.innerHTML = "€" + (attendancefee + transportfee);
+				}
+	
+			</script>
+
+			<legend>Options</legend>
+			<label for="diet">
+				Diet
+			</label>
+			{% diet_failure %}
+			<select id="diet" name="diet">				
+				{% dietitems %}
+			</select>
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				Attendance
+			</legend>
+			{% attendance_failure %}
+			{% daysitems %}
+		</fieldset>
+
+		<fieldset>
+			<legend>
+				Transport service
+			</legend>
+			{% transport_failure %}
+			{% transportitems %}
+		</fieldset>
+
+		<fieldset>
+			<legend>Payment</legend>
+			<label for="accountowner">
+				Bank account owner
+			</label>
+			{% accountowner_failure %}
+			<input type="text" name="accountowner" value="{% accountowner %}">
+
+			<label for="accountnumber">
+				Bank account
+			</label>
+			{% accountnumber_failure %}
+			<input type="text" name="accountnumber" value="{% accountnumber %}">
+
+			<label>
+				{% payment_failure %}
+				<input class="checkbox" type="checkbox" name="payment" value="accept">
+				I accept <span id="total">up to €25 (may be lower depending on order)</span> will be deducted from this account.		
+			</label>
+		</fieldset>
+
+		<label for="additionalinfo">
+			Remarks
+		</label>
+		{% additionalinfo_failure %}
+		<input type="text" name="additionalinfo" value="{% additionalinfo %}">
+		
+		<label>
+			{% rules_failure %}
+			<input class="checkbox" type="checkbox" name="rules" value="accept">
+			I have read and accept the <a href="about:blank">rules</a>
+		</label>
+
+		<input type="submit" name="submit" value="Register!">
+	</form>
+</div>
+

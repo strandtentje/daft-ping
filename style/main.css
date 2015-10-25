@@ -167,6 +167,7 @@ a {
 }
 
 #planeet {
+	pointer-events: none;
 	width: 100vw; height: 25vw;
 	position: absolute;
 	z-index: 15;
@@ -181,12 +182,6 @@ a {
 	text-align: center;
 }
 
-@media(min-width: 1184px) {
-	#credits {
-		left: 15vw;
-	}
-}
-
 #credits a {
 	color: white;
 }
@@ -195,7 +190,55 @@ a {
 	min-height: 100vh;
 }
 
-form>input, form>label{
+@media(min-height: 75vw) {
+	#planeet {
+		position: fixed;
+		bottom: 0;
+	}
+
+	#credits {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		width: 100vw;
+	}
+
+	#contents {
+		padding-bottom: 25vw;
+	}
+}
+
+@media(min-width: 1184px) {
+	#credits {
+		left: 15vw;
+	}
+}
+
+fieldset {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 1cm;
+	border: none;	
+}
+
+legend {
+    width: 100%;
+}
+
+legend:after {
+	content: '.';
+	font-size: 0;
+	display: block;
+	border-bottom: solid 8px white;
+	border-right: solid 8px white;
+	width: 8px;
+	height: 8px;
+	margin-left: auto;
+	margin-right: auto;
+	transform: rotate(45deg);
+}
+
+form input, form label{
 	display: block;
 	width: 100%;
 	text-align: center;
@@ -203,27 +246,32 @@ form>input, form>label{
 	margin-right: auto;
 }
 
-form>input {
+form input {
 	font-size: 16pt;
 	padding: 12px;
+	width: calc(100% - 24px);
 	border: none;
 	border-radius: 24px;	
 }
 
-form>label {
+form label {
 	margin-top: 0.5cm;
 }
 
-form>input[type="submit"] {
+form input[type="submit"] {
 	background-color: white;
 	width: 10em;
 	margin-top: 0.9cm;
 }
 
 @media(min-width: 480px) {
-	form>input, form>label{
+	form input, form label{
 		display: block;
 		width: 50%;
+	}
+
+	.option {
+		width: 10em;
 	}
 }
 
@@ -233,4 +281,18 @@ form>input[type="submit"] {
 
 .central {
 	text-align: center;
+}
+
+.option {
+	text-align: left;	
+}
+
+.option input {
+	display: inline;
+	width: auto;
+}
+
+input.checkbox {
+	width: 16px;
+	height: 16px;
 }
