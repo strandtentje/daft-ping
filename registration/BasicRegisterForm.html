@@ -55,19 +55,25 @@
 			<script type="text/javascript">
 				var attendancefee = 20;
 				var transportfee = 0;
+				var memberhsipfee = 0;
 
 				function setattendance (fee) {
 					attendancefee = fee;
 					var total = document.getElementById("total");
-					total.innerHTML = "€" + (attendancefee + transportfee);
+					total.innerHTML = "€" + (attendancefee + transportfee + memberhsipfee);
 				}
 	
 				function settransport (fee) {
 					transportfee = fee;
 					var total = document.getElementById("total");
-					total.innerHTML = "€" + (attendancefee + transportfee);
+					total.innerHTML = "€" + (attendancefee + transportfee + memberhsipfee);
 				}
-	
+
+				function setmembership (fee) {
+					memberhsipfee = fee;
+					var total = document.getElementById("total");
+					total.innerHTML = "€" + (attendancefee + transportfee + memberhsipfee);
+				}	
 			</script>
 
 			<legend>Options</legend>
@@ -97,6 +103,14 @@
 		</fieldset>
 
 		<fieldset>
+			<legend>
+				Cover Membership
+			</legend>
+			{% membership_failure %}
+			{% membershipitems %}
+		</fieldset>
+
+		<fieldset>
 			<legend>Payment</legend>
 			<label for="accountowner">
 				Bank account owner
@@ -113,7 +127,7 @@
 			<label>
 				{% payment_failure %}
 				<input class="checkbox" type="checkbox" name="payment" value="accept">
-				I accept <span id="total">up to €25 (may be lower depending on order)</span> will be deducted from this account.		
+				I accept <span id="total">up to €30 (may be lower depending on order)</span> will be deducted from this account.		
 			</label>
 		</fieldset>
 
