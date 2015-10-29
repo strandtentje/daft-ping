@@ -324,3 +324,7 @@ input.checkbox {
 .aargh + form .error {
 	color: red;
 }
+
+.done + .undone {
+	display: none;
+}
