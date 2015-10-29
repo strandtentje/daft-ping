@@ -8,13 +8,6 @@
 @font-face {
   font-family: 'Quicksand';
   font-style: normal;
-  font-weight: 400;
-  src: local('Quicksand Regular'), local('Quicksand-Regular'), url('/static/fonts/Quicksand-Regular.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  font-style: normal;
   font-weight: 700;
   src: local('Quicksand Bold'), local('Quicksand-Bold'), url('/static/fonts/Quicksand-Bold.woff') format('woff');
 }
@@ -24,11 +17,4 @@
   font-style: normal;
   font-weight: 400;
   src: local('EB Garamond'), local('EBGaramond'), url('/static/fonts/EBGaramond.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'DSEG14';
-  font-style: normal;
-  font-weight: 700;
-  src: url('/static/fonts/DSEG14ModernMini-BoldItalic.woff') format('woff');
 }
