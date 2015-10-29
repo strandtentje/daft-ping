@@ -1,3 +1,6 @@
 [submodule "aglogin"]
 	path = aglogin
 	url = git@github.com:strandtentje/aglogin.git
+[submodule "admin/aglogin"]
+	path = admin/aglogin
+	url = git@github.com:strandtentje/aglogin.git

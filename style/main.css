@@ -320,3 +320,7 @@ input.checkbox {
 	width: 16px;
 	height: 16px;
 }
+
+.aargh + form .error {
+	color: red;
+}
