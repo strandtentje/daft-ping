@@ -1,4 +1,4 @@
 Participant "{% participant.to %}" received the
 following confirmation e-mail:
 
-{% participant %}
+{% *participant %}
