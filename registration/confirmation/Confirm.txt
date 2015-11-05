@@ -1,4 +1,4 @@
-Hi {% firstname %} {% lastname %}
+Hi {% *firstname %} {% *lastname %}
 
 You've signed up for "Daft Ping: LAN More Time". 
 
@@ -7,19 +7,19 @@ check for errors and notify us in a timely fashion
 if something isn't correct:
 
 ╔═ Address ═══════╾┈
-║ {% street %} {% number %}
-║ {% postal %}  {% city %}
+║ {% *street %} {% number %}
+║ {% postal %}  {% *city %}
 ╚════════╾┈
 
 ╔═ Bank account ═════╾┈
-║ {% accountnumber %} ({% accountowner %})
+║ {% accountnumber %} ({% *accountowner %})
 ╚════════╾┈
 
 ╔═ Perks and options ═════╾┈
 {% orders %}╚════════╾┈
 
 ╔═ Remarks ═════╾┈
-║ "{% additionalinfo %}"
+║ "{% *additionalinfo %}"
 ╚════════╾┈
 
 Kind regards,
